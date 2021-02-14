@@ -19,6 +19,24 @@ copy src/_zeroing.css /var/www/html/src/_zeroing.css
 copy src/particles.js /var/www/html/src/particles.js
 copy src/app.js /var/www/html/src/app.js 
 
+copy src/arrow.png /var/www/html/src/arrow.png
+copy src/card.png /var/www/html/src/card.png
+copy src/desktop-background.png /var/www/html/src/desktop-background.png
+copy src/Exo2-Bold.ttf /var/www/html/src/Exo2-Bold.ttf
+copy src/Exo2-Regular.ttf /var/www/html/src/Exo2-Regular.ttf
+copy src/facebook.png /var/www/html/src/facebook.png
+copy src/github.png /var/www/html/src/github.png
+copy src/logo.png /var/www/html/src/logo.png
+copy src/main.png /var/www/html/src/main.png
+copy src/misprint.png /var/www/html/src/misprint.png
+copy src/misprint-disabled.png /var/www/html/src/misprint-disabled.png
+copy src/repetition.png /var/www/html/src/repetition.png
+copy src/repetition-disabled.png /var/www/html/src/repetition-disabled.png
+copy src/uniqueness.png /var/www/html/src/uniqueness.png
+copy src/validation.png /var/www/html/src/validation.png
+copy src/validation-disabled.png /var/www/html/src/validation-disabled.png
+copy src/vk.png /var/www/html/src/vk.png
+
 RUN mkdir /var/www/cgi-bin
 copy Makefile /var/www/cgi-bin/
 copy script.cpp /var/www/cgi-bin/
