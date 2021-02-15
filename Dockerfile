@@ -36,6 +36,7 @@ copy src/uniqueness.png /var/www/html/src/uniqueness.png
 copy src/validation.png /var/www/html/src/validation.png
 copy src/validation-disabled.png /var/www/html/src/validation-disabled.png
 copy src/vk.png /var/www/html/src/vk.png
+copy src/script.js /var/www/html/src/script.js
 
 RUN mkdir /var/www/cgi-bin
 copy Makefile /var/www/cgi-bin/
