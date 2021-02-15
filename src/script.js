@@ -1,6 +1,6 @@
 // here comes antiplagiathism result
 
-const result = parseFloat(document.getElementById('result'));
+const result = document.getElementById('result');
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
 const captionFront = document.querySelector(".caption-front");
@@ -35,6 +35,7 @@ selectButton.onclick = (e) => {
 
 //open result
 checkButton.onclick = (e) => {
+  console.log(result);
   e.preventDefault();
   let action = selectButton.textContent.substring(1);
   if(action === 'Uniqueness'){
