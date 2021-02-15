@@ -1,6 +1,8 @@
 // here comes antiplagiathism result
 
-const result = parseFloat(document.getElementById('result').innerHTML);
+const result = parseFloat(document.getElementById('result').textContent);
+console.log(result)
+console.log(document.getElementById('result').textContent);
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
 const captionFront = document.querySelector(".caption-front");
