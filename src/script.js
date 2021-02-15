@@ -40,6 +40,7 @@ checkButton.onclick = (e) => {
   if(action === 'Uniqueness'){
     scanAnimation.classList.add('active');
     document.getElementById('result').textContent = result;
+    showResult();
     // setTimeout(function(){
     //   showResult();
     //   setTimeout(animateValue("result", 0, result, 3000), 0);
