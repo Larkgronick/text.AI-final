@@ -50,19 +50,19 @@ int main()
 }
 
 double antiPlagiarism(string text, string frag){
-	char textBase[N] = "hello my dear hello world ";
-	char textInput[N] = "My,,      dEaR ... heLlo couNTry curRENt dear hello faIl";
+	char textBase[N] = "";
+	char textInput[N] = "";
 	char textFragment[N] = "";
 	int attempts = 0;
 	int subCarriage = 0;
 	int wordsCounter = 0;
-	int originalCounter = 20;
+	int originalCounter = 0;
 	char* base = textBase;
 	char* fragment = textInput;
 	int inputLength;
 	getCharArrayFromString(textBase, text);
 	getCharArrayFromString(textInput, frag);
-    	changeInput(textInput);
+    changeInput(textInput);
 	inputLength = strLength(textInput);
 	for (int i = 0; i <= inputLength; i++) {
 		textFragment[subCarriage] = textInput[i];
