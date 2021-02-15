@@ -13,7 +13,7 @@ using namespace cgicc;
 #define N 256
 
 double antiPlagiarism(string text, string frag);
-string getDB();//get origin text from db.txt (don't modify tis function)
+string getDB(); //get origin text from db.txt (don't modify tis function)
 
 bool isOriginalLine(char* w1, char* w2);
 bool isSeparator(char c);
@@ -62,9 +62,28 @@ double antiPlagiarism(string text, string frag){
 	int inputLength;
 	getCharArrayFromString(textBase, text);
 	getCharArrayFromString(textInput, frag);
-    // my algorithm
-	return 20;
-
+    	changeInput(textInput);
+	inputLength = strLength(textInput);
+	for (int i = 0; i <= inputLength; i++) {
+		textFragment[subCarriage] = textInput[i];
+		subCarriage++;
+		if(isSeparator(textInput[i]))
+			wordsCounter++;
+		if (wordsCounter == WORDS_AMOUNT) {
+			for (int j = strLength(textFragment) - 1; j > subCarriage - 1; j--) {
+				textFragment[j] = 0;
+			}
+			fragment = textFragment;
+			if (isOriginalLine(base, fragment)) {
+				originalCounter++;
+			}
+			attempts++;
+			wordsCounter = 0;
+			i = i - subCarriage + firstWordLength(textFragment) + 1;
+			subCarriage = 0;
+		}
+	}
+	return originalCounter * 100 / attempts;
 }
 
 string getDB(){
@@ -155,6 +174,3 @@ void getCharArrayFromString(char textArray[], string text){
 		textArray[i] = text[i];	
 	textArray[i] = '\0';
 }
-
-
-

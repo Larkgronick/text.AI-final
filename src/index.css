@@ -16,10 +16,9 @@
 
 body {
     width: 1024px;
-    height: 100vh;
     margin: 0 auto;
     color: #fff;
-    background: url('./desktop-background.png') no-repeat;
+    background: url('./desktop-background.png');
     background-size: cover;
     position: relative;
 }
@@ -52,7 +51,7 @@ h1{
     width: 700px;  
 }
 
-#text{
+#value{
     width: 533px;
     height: 204px;
     margin: 0 60px 31px 0;
@@ -191,8 +190,7 @@ h1{
 }
 
 footer{
-    width: 100%;
-    margin-left: 5%;
+    width: 109%;
     padding: 25px;
     display: flex;
     justify-content: space-between;
@@ -281,10 +279,10 @@ footer{
   height: 332px;
   background-color: #386488;
   border-radius: 8px;
-  position:absolute;
-  top: 375px;
-  left: 53%;
-  z-index:2;
+  position: absolute;
+  top: 342px;
+  left: 57%;
+  z-index: 2;
   -moz-animation: active 2s infinite;
   -webkit-animation: active 2s infinite;
   animation: active 2s infinite;
@@ -311,18 +309,17 @@ footer{
     #check-form{
         justify-content: center;
     }
-    #text{
+    #value{
         margin: 0 0px 31px 0;
     }
     footer{
-        width: 70%;
-        right: 0%;
-        left: 8%;
+        width: 52%;
+        left: 21%;
     }
     .active
     {
-        top: 752px;
-        left: 18%;
+        top: 718px;
+        left: 24%;
     }
 
 }
@@ -360,12 +357,12 @@ footer{
     }
 
     .active{
-        height: 312px;  
-        top: 352px;
-        left: 8%;
+        height: 312px;
+        top: 316px;
+        left: 12%;
     }
 
-    #text{
+    value{
         width: 500px;
     }
 

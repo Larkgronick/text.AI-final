@@ -4,14 +4,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <title>text.AI</title>
-    <link rel="shortcut icon" href="./assets/images/brain.png" type="image/png">
+    <link rel="shortcut icon" href="./src/main.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet"/>
     <link href="./src/index.css" rel="stylesheet"/>
   </head>
   <body>
-    <!-- <div id="img" class="content__column">
-      <img class="content-column__img" src="./src/main.png" alt="main">
-    </div>    -->
     <header class="title">
       <h1>text.AI</h1>
       <p class="caption-front">A word processor with artificial intelligence elements </p>
@@ -19,7 +16,7 @@
     </header>
     <section id="check-area">
       <form id="check-form" >
-        <textarea id="text" name="text" placeholder="Enter text here to check for uniqueness"></textarea>
+        <textarea id="value" name="value" placeholder="Enter text here to check for uniqueness"></textarea>
         <div class="check-buttons">
           <div class="select-type">
             <button id="check-type" value=""></button>
@@ -41,8 +38,10 @@
     </section>
     <section id="check-result" style="display: none;">
       <div class="result-field">
-        <img src="./src/main.png" alt="brain">
-        <div class="result-text">Your text is <div id="result" class=""></div>% unique</div>
+        <div id="img" class="content__column">
+          <img class="content-column__img" src="./src/main.png" alt="main">
+        </div>   
+        <div class="result-text">Your text is <div id="result" class="">80</div>% unique</div>
       </div>
       <button id="back-button">Back</button>
     </section>
@@ -58,6 +57,6 @@
     <script src="src/particles.js"></script>
     <script src="src/app.js"></script>
     <script src="src/serverRequest.js"></script>
-    <!-- <script src="./src/script.js"></script> -->
+    <script src="./src/script.js"></script>
   </body>
 </html>

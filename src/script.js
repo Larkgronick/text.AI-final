@@ -1,7 +1,6 @@
 // here comes antiplagiathism result
-let uniqueness = 80;
 
-const result = document.getElementById('result');
+const result = parseFloat(document.getElementById('result').innerHTML);
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
 const captionFront = document.querySelector(".caption-front");
@@ -18,7 +17,6 @@ const popupMessage = document.getElementById("popup-message")
 // select check-type
 listElements.forEach((element, index) => {
   element.innerHTML = `<img src="${element.getAttribute('data-thumbnail')}"/> <span>${element.innerText}</span>`;
-  // console.log(index);
   element.onclick = () => {
     list.style.display = 'none';
     selectButton.setAttribute('value', element.getAttribute('value'));
@@ -43,7 +41,7 @@ checkButton.onclick = (e) => {
     scanAnimation.classList.add('active');
     setTimeout(function(){
       showResult();
-      setTimeout(animateValue("result", 0, uniqueness, 3000), 0);
+      setTimeout(animateValue("result", 0, result, 3000), 0);
     }, 3000);
   } else {
     popupMessage.classList.add('show');
