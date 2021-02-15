@@ -1,6 +1,6 @@
 // here comes antiplagiathism result
 
-const result = parseFloat(document.getElementById('result').textContent);
+const result = parseFloat(document.getElementById('result'));
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
 const captionFront = document.querySelector(".caption-front");
@@ -37,19 +37,17 @@ selectButton.onclick = (e) => {
 checkButton.onclick = (e) => {
   e.preventDefault();
   console.log(result);
-  console.log(document.getElementById('result').textContent);
-  // let action = selectButton.textContent.substring(1);
-  document.getElementById('result').textContent = result;
-  // if(action === 'Uniqueness'){
-  //   scanAnimation.classList.add('active');
-  //   setTimeout(function(){
-  //     showResult();
-  //     setTimeout(animateValue("result", 0, result, 3000), 0);
-  //   }, 3000);
-  // } else {
-  //   popupMessage.classList.add('show');
-  //   setTimeout(function () {popupMessage.classList.remove('show')}, 3000);
-  // }
+  let action = selectButton.textContent.substring(1);
+  if(action === 'Uniqueness'){
+    scanAnimation.classList.add('active');
+    setTimeout(function(){
+      showResult();
+      setTimeout(animateValue("result", 0, result, 3000), 0);
+    }, 3000);
+  } else {
+    popupMessage.classList.add('show');
+    setTimeout(function () {popupMessage.classList.remove('show')}, 3000);
+  }
 }
 
 //back to main
