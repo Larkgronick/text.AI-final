@@ -1,5 +1,3 @@
-// here comes antiplagiathism result
-
 const result = document.getElementById('result');
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
@@ -12,7 +10,6 @@ const checkButton = document.getElementById("send");
 const backButton = document.getElementById("back-button");
 const selectButton = document.getElementById("check-type");
 const popupMessage = document.getElementById("popup-message")
-
 
 // select check-type
 listElements.forEach((element, index) => {
@@ -38,7 +35,7 @@ checkButton.onclick = (e) => {
   console.log(result);
   console.log(result.innerHTML);
   console.log(parseInt(result.innerHTML));
-  console.log('1')
+  console.log('1');
   e.preventDefault();
   let action = selectButton.textContent.substring(1);
   if(action === 'Uniqueness'){
