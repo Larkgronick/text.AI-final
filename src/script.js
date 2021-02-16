@@ -38,6 +38,7 @@ checkButton.onclick = (e) => {
   console.log(result);
   console.log(result.innerHTML);
   console.log(parseInt(result.innerHTML));
+  console.log('1')
   e.preventDefault();
   let action = selectButton.textContent.substring(1);
   if(action === 'Uniqueness'){
