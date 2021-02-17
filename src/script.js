@@ -1,3 +1,4 @@
+// i was here
 const allowedLength = 4;
 const result = document.getElementById('result');
 const list = document.getElementById('type-picker');

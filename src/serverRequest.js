@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector("#img").classList.add('opacity');
             document.querySelector("#result").innerHTML = `${parseInt(request.responseText.replace(/[^\d]/g, ''))}`;
         })
-
+// i was here
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
         request.send(payload)
     })
