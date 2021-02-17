@@ -33,21 +33,22 @@ selectButton.onclick = (e) => {
 
 //open result
 checkButton.onclick = (e) => {
-  const convertResult = parseInt(result.innerHTML);
-  console.log(result.innerHTML.length);
   e.preventDefault();
+  let convertResult = parseInt(result.innerHTML);
   let action = selectButton.textContent.substring(1);
   if(action === 'Uniqueness'){
-    if(result.innerHTML.length < allowedLength){
-      scanAnimation.classList.add('active');
-      document.getElementById('result').textContent = result;
-      setTimeout(function(){
-        showResult();
-        setTimeout(animateValue("result", 0, convertResult, 3000), 0);
-      }, 3000);
-    };
-
+    if(isNaN(convertResult)){
+      popupMessage.classList.add('show');
+      popupMessage.innerText='Text is no provided!'
+      setTimeout(function () {popupMessage.classList.remove('show')}, 3000);
+    } else if(result.innerHTML.length < allowedLength){
+      openResult(convertResult)
+    } else {
+      convertResult = 100;
+      openResult(convertResult);
+    } 
   } else {
+    popupMessage.innerText='Action in developement. Please, try another one...'
     popupMessage.classList.add('show');
     setTimeout(function () {popupMessage.classList.remove('show')}, 3000);
   }
@@ -63,6 +64,15 @@ backButton.onclick = (e) => {
   checkArea.style.display = 'flex';
 }
 
+
+function openResult(value){
+  scanAnimation.classList.add('active');
+  setTimeout(function(){
+    showResult();
+    setTimeout(animateValue("result", 0, value, 3000), 0);
+  }, 3000);
+}
+
 function showResult(){
   captionBack.style.display = 'block';
   checkResult.style.display = 'flex';
@@ -71,18 +81,18 @@ function showResult(){
   checkArea.style.display = 'none';
 }
 
-// function animateValue(id, start, end, duration) {
-//   if (start === end) return;
-//   let range = end - start;
-//   let current = start;
-//   let increment = end > start? 1 : -1;
-//   let stepTime = Math.abs(Math.floor(duration / range));
-//   let obj = document.getElementById(id);
-//   let timer = setInterval(function() {
-//       current += increment;
-//       obj.innerHTML = current;
-//       if (current == end) {
-//           clearInterval(timer);
-//       }
-//   }, stepTime);
-// }
+function animateValue(id, start, end, duration) {
+  if (start === end) return;
+  let range = end - start;
+  let current = start;
+  let increment = end > start? 1 : -1;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  let obj = document.getElementById(id);
+  let timer = setInterval(function() {
+      current += increment;
+      obj.innerHTML = current;
+      if (current == end) {
+          clearInterval(timer);
+      }
+  }, stepTime);
+}
