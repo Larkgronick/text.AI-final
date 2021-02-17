@@ -1,6 +1,5 @@
-// i was here
+const allowedLength = 4;
 const result = document.getElementById('result');
-console.log(result)
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
 const captionFront = document.querySelector(".caption-front");
@@ -34,20 +33,20 @@ selectButton.onclick = (e) => {
 
 //open result
 checkButton.onclick = (e) => {
-  console.log(result);
-  console.log(result.innerHTML);
-  console.log(parseInt(result.innerHTML));
-  console.log('1');
+  const convertResult = parseInt(result.innerHTML);
+  console.log(result.innerHTML.length);
   e.preventDefault();
   let action = selectButton.textContent.substring(1);
   if(action === 'Uniqueness'){
-    scanAnimation.classList.add('active');
-    document.getElementById('result').textContent = result;
-    showResult();
-    // setTimeout(function(){
-    //   showResult();
-    //   setTimeout(animateValue("result", 0, result, 3000), 0);
-    // }, 3000);
+    if(result.innerHTML.length < allowedLength){
+      scanAnimation.classList.add('active');
+      document.getElementById('result').textContent = result;
+      setTimeout(function(){
+        showResult();
+        setTimeout(animateValue("result", 0, convertResult, 3000), 0);
+      }, 3000);
+    };
+
   } else {
     popupMessage.classList.add('show');
     setTimeout(function () {popupMessage.classList.remove('show')}, 3000);
