@@ -1,4 +1,5 @@
 const result = document.getElementById('result');
+console.log(result)
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
 const captionFront = document.querySelector(".caption-front");

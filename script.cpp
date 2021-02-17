@@ -25,6 +25,7 @@ void getCharArrayFromString(char textArray[], string text);
 
 int main()
 {
+	// i was here
     Cgicc form;
     string name;
 
