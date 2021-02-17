@@ -1,3 +1,4 @@
+// i was here
 const result = document.getElementById('result');
 console.log(result)
 const list = document.getElementById('type-picker');
