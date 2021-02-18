@@ -276,7 +276,7 @@ footer{
     left: 0;
     top: -39px;
     width: 100vw;
-    height: 167%;
+    height: 100vh;
     background: linear-gradient(180deg, #4E54C8 0%, #8F94FB 100%);
     background-size: cover;
  }

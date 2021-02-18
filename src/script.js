@@ -35,8 +35,6 @@ selectButton.onclick = (e) => {
 checkButton.onclick = (e) => {
   e.preventDefault();
   let convertResult = parseInt(result.innerHTML);
-  console.log(result);
-  console.log(convertResult);
   let action = selectButton.textContent.substring(1);
   if(action === 'Uniqueness'){
     if(isNaN(convertResult)){
