@@ -9,56 +9,59 @@
     <link href="./src/index.css" rel="stylesheet"/>
   </head>
   <body>
-    <div id="particles-js"></div>
-    <header class="title">
-      <h1>text.AI</h1>
-      <p class="caption-front">A word processor with artificial intelligence elements </p>
-      <p class="caption-back" style="display: none;">The result of checking the text for uniqueness</p>
-    </header>
-    <section id="check-area">
-      <form id="check-form" >
-        <textarea id="value" name="value" placeholder="Enter text here to check for uniqueness"></textarea>
-        <div class="check-buttons">
-          <div class="select-type">
-            <button id="check-type" value=""></button>
-            <ul id="type-picker">
-              <li value="uniqueness" data-thumbnail="./src/uniqueness.png">Uniqueness</li>
-              <li value="repetition" data-thumbnail="./src/repetition-disabled.png">Repetition</li>
-              <li value="misprint" data-thumbnail="./src/misprint-disabled.png">Misprint</li>
-              <li value="validation" data-thumbnail="./src/validation-disabled.png">Validation</li>
-            </ul>
+    <div class="main-container">
+      <header class="title">
+        <h1>text.AI</h1>
+        <p class="caption-front">A word processor with artificial intelligence elements </p>
+        <p class="caption-back" style="display: none;">The result of checking the text for uniqueness</p>
+      </header>
+      <section id="check-area">
+        <form id="check-form" >
+          <textarea id="value" name="value" placeholder="Enter text here to check for uniqueness"></textarea>
+          <div class="check-buttons">
+            <div class="select-type">
+              <button id="check-type" value=""></button>
+              <ul id="type-picker">
+                <li value="uniqueness" data-thumbnail="./src/uniqueness.png">Uniqueness</li>
+                <li value="repetition" data-thumbnail="./src/repetition-disabled.png">Repetition</li>
+                <li value="misprint" data-thumbnail="./src/misprint-disabled.png">Misprint</li>
+                <li value="validation" data-thumbnail="./src/validation-disabled.png">Validation</li>
+              </ul>
+            </div>
+            <div class="popup">
+              <button id='send' type="button">Check</button>
+              <span class="popup-text" id="popup-message">Action in developement. Please, try another one...</span>
+            </div>
           </div>
-          <div class="popup">
-            <button id='send' type="button">Check</button>
-            <span class="popup-text" id="popup-message">Action in developement. Please, try another one...</span>
-          </div>
+        </form>
+          <div id="scan-animation"></div>
+          <img class="card" src="./src/card.png" alt="card">
+      </section>
+      <section id="check-result" style="display: none;">
+        <div class="result-field">
+          <div id="img" class="content__column">
+            <img class="content-column__img" src="./src/main.png" alt="main">
+          </div>   
+          <div class="result-text">Your text is <div id="result"></div>% unique</div>
         </div>
-      </form>
-        <div id="scan-animation"></div>
-        <img class="card" src="./src/card.png" alt="card">
-    </section>
-    <section id="check-result" style="display: none;">
-      <div class="result-field">
-        <div id="img" class="content__column">
-          <img class="content-column__img" src="./src/main.png" alt="main">
-        </div>   
-        <div class="result-text">Your text is <div id="result"></div>% unique</div>
-      </div>
-      <button id="back-button">Back</button>
-    </section>
-    <footer id="footer">
-      <a href="http://devincubator.by/"><img class="incubator-logo" src="./src/logo.png" alt="incubator-logo"></a>
-      <p>Larkgronick, 2021</p>
-      <span class="socials">
-        <a href="https://github.com/Larkgronick"><img src="./src/github.png" alt="larkgronick-github"></a> 
-        <a href="https://vk.com/larkgronick"><img src="./src/vk.png" alt="larkgronick-vk"></a> 
-      </span>
-    </footer>
+        <button id="back-button">Back</button>
+      </section>
+      <footer id="footer">
+        <a href="http://devincubator.by/"><img class="incubator-logo" src="./src/logo.png" alt="incubator-logo"></a>
+        <p>Larkgronick, 2021</p>
+        <span class="socials">
+          <a href="https://github.com/Larkgronick"><img src="./src/github.png" alt="larkgronick-github"></a> 
+          <a href="https://vk.com/larkgronick"><img src="./src/vk.png" alt="larkgronick-vk"></a> 
+        </span>
+      </footer>
+    </div>
+    <div id="particles-js"></div>
     <script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
     <script src="src/particles.js"></script>
     <script src="src/app.js"></script>
     <script src="src/serverRequest.js" defer></script>
     <script src="src/script.js" defer></script>
   </body>
+  
 </html>
 
