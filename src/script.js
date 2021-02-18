@@ -77,7 +77,6 @@ function openResult(value){
 function showResult(){
   captionBack.style.display = 'block';
   checkResult.style.display = 'flex';
-
   captionFront.style.display = 'none';
   checkArea.style.display = 'none';
 }
