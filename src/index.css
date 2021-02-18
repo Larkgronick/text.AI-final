@@ -276,7 +276,7 @@ footer{
     left: 0;
     top: -39px;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     background: linear-gradient(180deg, #4E54C8 0%, #8F94FB 100%);
     background-size: cover;
  }
@@ -375,6 +375,7 @@ footer{
     }
 
     .check-buttons{
+        width: 320px;
         justify-content: center;
         flex-wrap: wrap;
     }
