@@ -35,6 +35,8 @@ selectButton.onclick = (e) => {
 checkButton.onclick = (e) => {
   e.preventDefault();
   let convertResult = parseInt(result.innerHTML);
+  console.log(result);
+  console.log(convertResult);
   let action = selectButton.textContent.substring(1);
   if(action === 'Uniqueness'){
     if(isNaN(convertResult)){
@@ -44,8 +46,7 @@ checkButton.onclick = (e) => {
     } else if(result.innerHTML.length < allowedLength){
       openResult(convertResult)
     } else {
-      convertResult = 100;
-      openResult(convertResult);
+      openResult(100);
     } 
   } else {
     popupMessage.innerText='Action in developement. Please, try another one...'
